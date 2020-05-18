@@ -7,7 +7,7 @@ A simple task manager API using Node.js and Express.js
 - Install PostgreSQL and run that.
 - Go to the project dir and run: `npm install`.
 - Run `npm run setup` to create the config files.<br />
-By default, the config file would be created using PosgresSQL driver and should use `tasks_development` as development environment database. Set the credentials and database to start the project.
+By default, the config file would be created using PostgreSQL driver and should use tasks_development as a development environment database. Set the credentials and database to start the project.
 - Run `npm start`to start the project.<br />
 By default, the app would run using 3001 port (set the key `defaultPort` from config file if want to change the port).
 - Open [http://localhost:3001/tasks/list](http://localhost:3001/tasks/list) to view the task list.
