@@ -31,6 +31,12 @@ module.exports = (sequelize, DataTypes) => {
 
   model.associate = (models) => {};
 
+  /**
+   * Simple interface to taks return.
+   * @method filter
+   * @param {Object} registry Task registry.
+   * @return {Object} Filtered Object.
+   */
   model.filter = registry => {
     return _.pick(registry, [
       'id',

@@ -1,6 +1,8 @@
-Fs = require('fs');
-Path = require('path');
-Async = require('async');
+'use strict';
+
+const Fs = require('fs');
+const Path = require('path');
+const Async = require('async');
 
 const targetPath = Path.join(__dirname, 'config');
 

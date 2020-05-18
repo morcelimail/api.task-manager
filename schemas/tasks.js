@@ -1,18 +1,18 @@
 'use strict';
 
-const joi = require('joi');
+const Joi = require('joi');
 
 module.exports = {
-  id: joi.number().min(1).required(),
-  title: joi.string().min(1).max(256).required(),
-  description: joi.string().min(1).max(1024).required(),
-  status: joi.string().allow(
+  id: Joi.number().min(1).required(),
+  title: Joi.string().min(1).max(256).required(),
+  description: Joi.string().min(1).max(1024).required(),
+  status: Joi.string().valid(
     'pending',
     'inProgress',
     'done',
-    'deleted'   
+    'deleted'
   ).required(),
-  createdAt: joi.string().min(10).optional().allow(null),
-  updatedAt: joi.string().min(10).optional().allow(null),
-  deletedAt: joi.string().min(10).optional().allow(null),
+  createdAt: Joi.string().min(10).optional().allow(null),
+  updatedAt: Joi.string().min(10).optional().allow(null),
+  deletedAt: Joi.string().min(10).optional().allow(null),
 };

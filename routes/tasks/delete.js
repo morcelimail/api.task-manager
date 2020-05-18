@@ -81,8 +81,10 @@ module.exports = {
         }
         return libs.utils.badRequest(res, error.message);
       }
-    
-      res.json(models.tasks.filter(data.task));
+
+      res.json(models.tasks.filter({
+        id: parseInt(req.params.id, 10)
+      }));
     });
   }
 };

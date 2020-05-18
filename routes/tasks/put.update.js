@@ -15,12 +15,10 @@ module.exports = {
   path: '/tasks/:id/update',
   handler: (req, res) => {
     // validate the request
-    const bodySchema = _.pick(schemas.task, ['title', 'description']);
-    const bodyError = libs.utils.validate(req.params, { id: schemas.tasks.id });
-  
-    const paramsSchema = _.pick(schemas.task, 'id');
-    const paramsError = libs.utils.validate(req.params, { id: schemas.tasks.id });
-  
+    const bodySchema = _.pick(schemas.tasks, ['id', 'title', 'description']);
+    const bodyError = libs.utils.validate(req.body, bodySchema);
+    const paramsError = libs.utils.validate(req.params || {}, { id: schemas.tasks.id });
+
     if (Boolean(bodyError) || Boolean(paramsError)) {
       return libs.utils.badRequest(res, bodyError || paramsError);
     }

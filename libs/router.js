@@ -7,7 +7,17 @@ const express = require('express');
 
 const router = express.Router();
 
+/**
+ * @class
+ * Class lib to handle routes.
+ */
 class Router {
+
+  /**
+   * Generate routes from a base path.
+   * @param {Object} app
+   * @param {String} basepath 
+   */
   generate(app, basepath=__dirname) {
     const filepathList = read(basepath);
   
