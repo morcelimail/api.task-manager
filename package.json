@@ -1,0 +1,25 @@
+{
+  "name": "api.tasks",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "setup": "node ./setup.js"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "axios": "^0.19.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "fs-readdir-recursive": "^1.1.0",
+    "globals": "^13.0.0",
+    "http-errors": "~1.6.3",
+    "joi": "^14.3.1",
+    "lodash": "^4.17.15",
+    "morgan": "~1.9.1",
+    "pg": "^8.2.1",
+    "sequelize": "^5.21.9"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "development": {
+    "username" : "postgres",
+    "password" : "postgres",
+    "database" : "tasks_development",
+    "host" : "127.0.0.1",
+    "port" : "5432",
+    "dialect" : "postgres",
+    "defaultPort": 3001,
+    "cors": {
+      "origin": "*",
+      "headers": "*",
+      "methods": "*"
+    }
+  },
+  "test": {
+    "username" : "postgres",
+    "password" : "postgres",
+    "database" : "tasks_development",
+    "host" : "127.0.0.1",
+    "port" : "5432",
+    "dialect" : "postgres",
+    "defaultPort": 3001,
+    "cors": {
+      "origin": "*",
+      "headers": "*",
+      "methods": "*"
+    }
+  },
+  "production" : {
+    "username" : "postgres",
+    "password" : "postgres",
+    "database" : "tasks_development",
+    "host" : "127.0.0.1",
+    "port" : "5432",
+    "dialect" : "postgres",
+    "defaultPort": 80,
+    "cors": {
+      "origin": ["https://tasks.com"],
+      "headers": "*",
+      "methods": "*"
+    }
+  } 
+}
