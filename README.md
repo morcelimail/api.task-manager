@@ -20,6 +20,8 @@ Get a task by Id.
 - `id` {Number} (required) - Target Id.
 #### Return
 - {Object} JSON Object:
+
+`curl -X GET "http://localhost:3001/tasks/123/get"`
 ```
 {
   "id": 123,
@@ -34,6 +36,8 @@ Get a task by Id.
 Get all active tasks.
 #### Return
 - Arary<{Object}> List of tasks:
+
+`curl -X GET "http://localhost:3001/tasks/list"`
 ```
 [
   {
@@ -59,6 +63,8 @@ Create a task.
 - `description` {String} (required) - Task description (size: 1~1024).
 #### Return
 - {Object} New JSON object task:
+
+`curl -X POST --data "title=foo&description=bar" "http://localhost:3001/tasks/create"`
 ```
 {
   "id": 123,
@@ -79,6 +85,8 @@ Update a task.
 - `description` {String} (required) - Task description (size: 1~1024).
 #### Return
 - {Object} Updated JSON object task:
+
+`curl -X PUT --data "id=123&title=updated%20foo&description=updated%20bar" "http://localhost:3001/tasks/123/update"`
 ```
 {
   "id": 123,
@@ -98,6 +106,8 @@ Change the task status by ID.
 - `status` {String} (required) - Task status (allowed values: ["pending", "inProgress", "done"]).
 #### Return
 - {Object} Updated JSON object task:
+
+`curl -X PUT --data "id=123&status=inProgress" "http://localhost:3001/tasks/123/update/status"`
 ```
 {
   "id": 123,
@@ -114,6 +124,8 @@ Delete a task by ID.
 - `id` {Number} (required) - Target Id.
 #### Return
 - {Object} JSON Object with target ID:
+
+`curl -X DELETE "http://localhost:3001/tasks/123/delete"`
 ```
 {
   "id": 123
